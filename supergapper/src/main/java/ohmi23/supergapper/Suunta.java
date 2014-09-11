@@ -4,4 +4,8 @@ public enum Suunta {
  
     YLOS, OIKEA, ALAS, VASEN, TYHJA;
     
+    // Näppäimistönkuuntelijaa varten suunta-enumit, 
+    // TYHJA on tyhjakäynti jossa ei liikuta vaan ollaan paikallaan.
+    
+    
 }
