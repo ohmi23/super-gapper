@@ -17,7 +17,7 @@ public class Gapperpeli {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
-        this.kentta = new Kentta(3,3);
+        this.kentta = new Kentta(leveys, korkeus);
         this.gapper = new Gapper(0,0);
         this.seeker = new Seeker(3,3); // Tai Superseeker jossa AI.
         
