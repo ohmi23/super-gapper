@@ -6,9 +6,10 @@ public class Gapperpeli {
     private int korkeus;
     private int leveys;
     private boolean jatkuu;
-    //private Gapper gapper;
-    //private Seeker seeker;
-    //private Kentta kentta;
+    private Kentta kentta;
+    private Gapper gapper;
+    private Seeker seeker;
+    
     
     
     public Gapperpeli(int leveys, int korkeus) {
@@ -16,31 +17,21 @@ public class Gapperpeli {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
+        this.kentta = new Kentta(3,3);
+        this.gapper = new Gapper(0,0);
+        this.seeker = new Seeker(3,3); // Tai Superseeker jossa AI.
         
         
     }
     
-    
     // To do: 
     
     // JUnit testit testaavat onko kenttä oikean kokoinen.
-    
-    // Matopeli luo kentän käyttäen Tronviiva-olioita.
-    // Tronviiva-olion sisälle tulee lista kohdista joissa on käyty.
-    
-    // Näppäimistönkuuntelija ja käyttöliittymä-luokat.
-    
-    // Matopeli luo Gapper-olion. (extends Ukko)
-    // Matopeli luo Seeker-olion. (extends Ukko)
-    // Matopeli luo SuperSeeker olion jolla parempi tekoäly (Extends Seeker)
-    // Matopeli alkaa laskemaan kentän numeroa, pisteitä ja elämiä.
-    // Matopeli tarkkailee Gapper-Seeker törmäyksiä.
-    
-    // 
-    
-    // Matopeli käynnistää pelin
-    // Matopeli havaitsee törmäyksen ja vähentää elämän, kun elämät loppuvat,
-    // Matopeli kirjaa pisteet.
+    // Näppäimistönkuuntelija 
+    // käyttöliittymä
+    // Statistiikka (Elämät, pisteet, kentän numero)
+    // Gapper-Seeker törmäysten tarkistaja joka havaitsee törmäyksen ja vähentää elämän, kun elämät loppuvat,
+    // Matopeli kirjaa pisteet tiedostoon.
     // Matopeli päättyy.
     
 }
