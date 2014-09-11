@@ -1,15 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package ohmi23.supergapper;
 
-/**
- *
- * @author olantika
- */
+import java.util.List;
+
 public class Kentta {
+    
+    // Kenttä luodaan syötteen perusteella tronviivoista
+    
+    private List<Tronviiva> tronviivat; 
+            
+           
     
 }
