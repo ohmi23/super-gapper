@@ -1,6 +1,8 @@
 
 package ohmi23.supergapper;
 
+import ohmi23.supergapper.Suunta;
+
 public class Gapperpeli {
 
     private int korkeus;
@@ -18,8 +20,8 @@ public class Gapperpeli {
         this.korkeus = korkeus;
         this.jatkuu = true;
         this.kentta = new Kentta(leveys, korkeus);
-        this.gapper = new Gapper(0,0);
-        this.seeker = new Seeker(3,3); // Tai Superseeker jossa AI.
+        this.gapper = new Gapper(0,0, Suunta.OIKEA);
+        this.seeker = new Seeker(3,3, Suunta.VASEN); // Tai Superseeker jossa AI.
         
         
     }
