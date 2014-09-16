@@ -20,6 +20,11 @@ Viikko 2
 
 11.09 to - 4h - Ohjelmointi aloitettu. Tietorakenteen miettimistä pelikentälle.
 
-12.09 pe - 
+12.09 pe - 0h - Annettu Gapperille ja Seekerille suunnat.
 
 Viikko 3
+
+15.09 ma - 0h - Kokeiltu Tronviivojen listaamista pysty- ja vaakalistaan.
+
+16.09 ti - 2h - Kentän luomisen toteutusta edistetty.
+
