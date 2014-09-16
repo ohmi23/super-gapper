@@ -2,13 +2,16 @@ package ohmi23.supergapper;
 
 public class Liikkuja {
 
-    int x;
-    int y;
-    int nopeus;
+    private int x;
+    private int y;
+    private int nopeus;
+    private Suunta suunta;
+    
 
-    public Liikkuja(int x, int y) {
+    public Liikkuja(int x, int y, Suunta suunta) {
         this.x = x;
         this.y = y;
+        this.suunta = suunta;
         this.nopeus = 1; // Gapper aina nopeampi kuin Seeker tai yhtä nopea.
     }
 
@@ -19,6 +22,16 @@ public class Liikkuja {
     public int getY() {
         return y;
     }
+    
+    public Suunta getSuunta() {
+        return suunta;
+    }
+    
+    public void setSuunta(Suunta suunta) {
+        this.suunta = suunta;
+    }
+    
+    
     
     public int getNopeus() {
         return nopeus;
