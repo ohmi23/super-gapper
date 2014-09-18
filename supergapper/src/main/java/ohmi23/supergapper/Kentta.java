@@ -9,9 +9,11 @@ public class Kentta {
     private int korkeus;
     private List<Tronviiva> tronviivat; // Tietorakenne mietinnässä. Ei välttämättä lista.
     
-    // Kenttä tietää kokonsa ja koostuu tronviivoista.
+    // Kenttä tietää kokonsa ja koostuu ruuduista joita ympäröivät tronviivat.
     // Esim 3 x 3 kenttä sis. 24 tronviivaa.
     
+    
+    // to do: vaihdetaan tähän luokkaan tronviivojen tilalle ruudut.
 
     public Kentta(int leveys, int korkeus) {
         this.leveys = leveys;
