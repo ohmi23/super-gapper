@@ -28,3 +28,6 @@ Viikko 3
 
 16.09 ti - 2h - Kentän luomisen toteutusta edistetty.
 
+17.09 ke - 1h - kertailtu taulukoita
+
+18.09 to - xh - luotu uml-kaavio.
