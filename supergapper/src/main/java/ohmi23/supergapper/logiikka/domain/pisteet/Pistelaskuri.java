@@ -1,5 +1,5 @@
 
-package ohmi23.supergapper;
+package ohmi23.supergapper.logiikka.domain.pisteet;
 
 public class Pistelaskuri {
     

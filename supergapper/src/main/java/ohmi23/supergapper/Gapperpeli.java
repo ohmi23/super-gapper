@@ -1,6 +1,9 @@
 
 package ohmi23.supergapper;
 
+import ohmi23.supergapper.logiikka.domain.liikkuja.Gapper;
+import ohmi23.supergapper.logiikka.domain.liikkuja.Seeker;
+import ohmi23.supergapper.logiikka.domain.kentta.Kentta;
 import ohmi23.supergapper.Suunta;
 
 public class Gapperpeli {
