@@ -1,11 +1,52 @@
-
 package ohmi23.supergapper.logiikka.domain.pisteet;
 
 public class Pistelaskuri {
-    
+
     // tuntee kentän ja kentän ruudut.
-    // päivittää pistelukua
-    // ilmoittaa kentän valmistumisesta
-    // logiikka: kun ruudun sivut on käyty, sytytetään ruudun pistevalo.
-    // 
+    int kentanNumero;
+    int pisteet;
+    int elamat;
+
+    public Pistelaskuri() {
+        this.kentanNumero = 1;
+        this.pisteet = 0;
+        this.elamat = 3;
+    }
+    
+    public void lisaaNormaalitPisteet() {
+        this.pisteet += 50;
+    }
+
+    public void lisaaErikoisPisteet() {
+        this.pisteet += 100;
+    }
+    
+    public void nollaaPisteet() {
+        this.pisteet = 0;
+    }
+
+    public void setKentanNumero(int kentanNumero) {
+        this.kentanNumero = kentanNumero;
+    }
+    
+    public void seuraavaKentta() {
+        this.kentanNumero += 1;
+    }
+    
+    public void alkuKentta() {
+        this.kentanNumero = 1;
+    }
+    
+    public void vahennaElama() {
+        if (this.elamat > 0) {
+            this.elamat -= 1;
+        }
+    }
+
+    public void lisaElama() {
+        this.elamat += 1;
+    }
+    
+    
+    
 }

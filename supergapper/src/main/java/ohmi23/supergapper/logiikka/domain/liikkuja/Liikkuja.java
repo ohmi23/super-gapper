@@ -1,7 +1,5 @@
 package ohmi23.supergapper.logiikka.domain.liikkuja;
 
-import ohmi23.supergapper.Suunta;
-
 public class Liikkuja {
 
     private int x;

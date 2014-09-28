@@ -1,4 +1,4 @@
-package ohmi23.supergapper;
+package ohmi23.supergapper.logiikka.domain.liikkuja;
     
 public enum Suunta {
  
