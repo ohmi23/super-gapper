@@ -15,18 +15,16 @@ public class TronviivaTest {
     }
     
     @BeforeClass
-    public static void setUpClass() {
+    public static void setUpClass() throws Exception {
     }
     
     @AfterClass
-    public static void tearDownClass() {
+    public static void tearDownClass() throws Exception {
     }
     
     @Before
     public void setUp() {
         Tronviiva tronviiva = new Tronviiva();
-        
-        
     }
     
     @After
@@ -44,7 +42,10 @@ public class TronviivaTest {
     
     @Test
     public void onkoTaulukonkokoOikea() {
-        assertEquals("Taulukon koko on kahdeksan", tronviiva.toString().equals("8"));
+        Tronviiva tronviiva = new Tronviiva();
+        int vastaus = tronviiva.getResoluutio();
+        
+        assertEquals(8, vastaus);
     }
     
     

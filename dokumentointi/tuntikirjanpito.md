@@ -32,18 +32,24 @@ Viikko 3
 
 18.09 to - 1h. luotu uml-kaavio.
 
-19.09 pe - 
+19.09 pe - 0h.
 
 viikko 4
 
-22.09 ma - 0h ladattu koodikatselmointi ja tutkittu projektia.
+22.09 ma - 0h. ladattu koodikatselmointi ja tutkittu projektia.
 
-23.09 ti - 1h Kirjoitettu koodikatselmointi
+23.09 ti - 1h. Kirjoitettu koodikatselmointi
 
-24.09 ke - 
+24.09 ke - 0h.
 
-25.09 to - 
+25.09 to - 2h. Testien kirjoitus aloitettu.
 
-26.09 pe - 
+26.09 pe - 0h.
 
+27.09 la - 0h.
 
+28.09 su - 2h. Ohjelmointia. 
+
+viikko 5
+
+29.09 ma - 

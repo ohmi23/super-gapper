@@ -25,8 +25,8 @@ public class Tronviiva {
         this.resoluutio = resoluutio;
     }
 
-    public int[] getResoluutio() {
-        return resoluutio;
+    public int getResoluutio() {
+        return this.resoluutio.length;
     }
     
     @Override
