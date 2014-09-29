@@ -1,4 +1,4 @@
-Projekti Super-Gapper aloitettu 2.9.2014
+﻿Projekti Super-Gapper aloitettu 2.9.2014
 
 Viikko 1
 
@@ -48,8 +48,8 @@ viikko 4
 
 27.09 la - 0h.
 
-28.09 su - 2h. Ohjelmointia. 
+28.09 su - 2h. Ohjelmointia. Pistelaskurin setterit ja getterit.
 
 viikko 5
 
-29.09 ma - 
+29.09 ma - 2h. Päivitetty Windowsin Netbeans 7.4 -> 8.01.
