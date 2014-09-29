@@ -36,5 +36,10 @@ public class Liikkuja {
     public int getNopeus() {
         return nopeus;
     }
+    
+    public void liiku() {
+        
+    }
+    
         
 }
