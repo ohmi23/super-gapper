@@ -1,4 +1,4 @@
-package ohmi23.supergapper;
+package supergapper;
 
 public class App 
 {

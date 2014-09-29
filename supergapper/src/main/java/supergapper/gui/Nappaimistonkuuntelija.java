@@ -1,4 +1,4 @@
-package ohmi23.supergapper.gui;
+package supergapper.gui;
 
 public class Nappaimistonkuuntelija {
     

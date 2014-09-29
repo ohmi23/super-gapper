@@ -1,4 +1,4 @@
-package ohmi23.supergapper.logiikka.domain.liikkuja;
+package supergapper.logiikka.liikkuja;
 
 public class Seeker extends Liikkuja {
     

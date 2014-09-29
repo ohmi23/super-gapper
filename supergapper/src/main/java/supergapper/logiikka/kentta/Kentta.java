@@ -1,4 +1,4 @@
-package ohmi23.supergapper.logiikka.domain.kentta;
+package supergapper.logiikka.kentta;
 
 import java.util.ArrayList;
 import java.util.List;

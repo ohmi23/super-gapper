@@ -1,5 +1,6 @@
 package ohmi23.supergapper.logiikka.domain.kentta;
 
+import supergapper.logiikka.kentta.Tronviiva;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
