@@ -1,4 +1,4 @@
-package ohmi23.supergapper.logiikka.domain.kentta;
+package supergapper.logiikka.kentta;
 
 import supergapper.logiikka.kentta.Tronviiva;
 import org.junit.After;
