@@ -52,4 +52,4 @@ viikko 4
 
 viikko 5
 
-29.09 ma - 2h. Päivitetty Windowsin Netbeans 7.4 -> 8.01.
+29.09 ma - 5h. Päivitetty Windowsin Netbeans 7.4 -> 8.01 ja implementoitu näppäimistönkuuntelijaa ja käyttöliittymää.
