@@ -15,8 +15,6 @@ public class Gapperpeli {
     private Gapper gapper;
     private Seeker seeker;
     
-    
-    
     public Gapperpeli(int leveys, int korkeus) {
         
         this.leveys = leveys;
@@ -25,18 +23,23 @@ public class Gapperpeli {
         this.kentta = new Kentta(leveys, korkeus);
         this.gapper = new Gapper(0,0, Suunta.OIKEA);
         this.seeker = new Seeker(3,3, Suunta.VASEN); // Tai Superseeker jossa AI.
-        
-        
     }
+    
+    
+    
+    
     
     // To do: 
     
-    // JUnit testit testaavat onko kenttä oikean kokoinen.
+    // JUnit testit testaavat onko kenttä oikean kokoinen yms.
     // Näppäimistönkuuntelija 
     // käyttöliittymä
-    // Statistiikka (Elämät, pisteet, kentän numero)
     // Gapper-Seeker törmäysten tarkistaja joka havaitsee törmäyksen ja vähentää elämän, kun elämät loppuvat,
-    // Matopeli kirjaa pisteet tiedostoon.
-    // Matopeli päättyy.
+    // Gapperpeli kirjaa pisteet tiedostoon.
+    // Gapperpeli päättyy.
+
+    public Gapper getGapper() {
+        return gapper;
+    }
     
 }

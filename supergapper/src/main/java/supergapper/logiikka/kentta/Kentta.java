@@ -32,4 +32,11 @@ public class Kentta {
         }
         
     }
+    
+    public void listaaTronviivat() {
+        for (int i = 0; i < tronviivat.size(); i++) {
+            tronviivat.get(i).toString();
+        }
+    }
+    
 }
