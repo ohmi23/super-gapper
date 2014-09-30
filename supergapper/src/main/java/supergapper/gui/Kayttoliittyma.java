@@ -21,10 +21,10 @@ public class Kayttoliittyma implements Runnable {
 
     @Override
     public void run() {
-        frame = new JFrame("Matopeli");
-        int sivunPituus = 600;
+        frame = new JFrame("Supergapper 2014 (v0.1)");
+        int sivunPituus = 800;
         int sivunKorkeus = 600;
-        frame.setPreferredSize(new Dimension(600, 600));
+        frame.setPreferredSize(new Dimension(sivunPituus, sivunKorkeus));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());

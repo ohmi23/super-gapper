@@ -32,7 +32,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         
         this.kentta = new Kentta(leveys, korkeus);
         this.gapper = new Gapper(0,0, Suunta.OIKEA);
-        this.seeker = new Seeker(3,3, Suunta.VASEN); // Tai Superseeker jossa AI.
+        this.seeker = new Seeker(50,50, Suunta.VASEN); // Tai Superseeker jossa AI.
    }
     
     // To do: 
@@ -46,6 +46,10 @@ public class Gapperpeli extends Timer implements ActionListener {
 
     public Gapper getGapper() {
         return gapper;
+    }
+    
+    public Seeker getSeeker() {
+        return seeker;
     }
     
     public void setGapper(Gapper gapper) {
