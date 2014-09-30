@@ -27,6 +27,7 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         g.setColor(Color.MAGENTA);
         Gapper gapperi = peli.getGapper();
         g.fillOval(10 * gapperi.getX(), 10 * gapperi.getY(), 10, 10);
+        
   
         
     }

@@ -22,9 +22,9 @@ public class Kayttoliittyma implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Matopeli");
-        int sivunPituus = 100;
-        int sivunKorkeus = 100;
-        frame.setPreferredSize(new Dimension(100, 100));
+        int sivunPituus = 600;
+        int sivunKorkeus = 600;
+        frame.setPreferredSize(new Dimension(600, 600));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
@@ -35,7 +35,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     public void luoKomponentit(Container container) {
-        piirtoalusta = new Piirtoalusta(gapperpeli, 100);
+        piirtoalusta = new Piirtoalusta(gapperpeli, 600);
         container.add(piirtoalusta);
         Nappaimistonkuuntelija n = new Nappaimistonkuuntelija(gapperpeli.getGapper());
         getFrame().addKeyListener(n);

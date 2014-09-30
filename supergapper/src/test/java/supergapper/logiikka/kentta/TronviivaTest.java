@@ -9,47 +9,41 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TronviivaTest {
-    
+
     private Tronviiva tronviiva;
-    
+
     public TronviivaTest() {
+        this.tronviiva = new Tronviiva();
+
     }
-    
+
     @BeforeClass
     public static void setUpClass() throws Exception {
     }
-    
+
     @AfterClass
     public static void tearDownClass() throws Exception {
     }
-    
+
     @Before
     public void setUp() {
-        Tronviiva tronviiva = new Tronviiva();
     }
-    
+
     @After
     public void tearDown() {
     }
-    
-//    @Test
-//    public void taulukkoTesti() {
-//        boolean tulikotaulukkotayteen = false;
-//        this.tronviiva.setTrue();
-//        
-//        assertTrue(tulikotaulukkotayteen);        
-//    }
-    
-    
-    @Test
-    public void onkoTaulukonkokoOikea() {
-        Tronviiva tronviiva = new Tronviiva();
-        int vastaus = tronviiva.getResoluutio();
+
+    /*
+    @Param
+     Javadoc esimerkki.
         
-        assertEquals(8, vastaus);
-    }
-    
-    
+     */
+//    @Test
+//    public void onkoTaulukonkokoOikea() {
+//        //Tronviiva tronviiva = new Tronviiva();
+//        int vastaus = tronviiva.getResoluutio();
+//        assertEquals(8, vastaus);
+//    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
