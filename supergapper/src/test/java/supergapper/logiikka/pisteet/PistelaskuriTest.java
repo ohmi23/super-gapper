@@ -17,7 +17,6 @@ public class PistelaskuriTest {
     
     public PistelaskuriTest() {
         this.pistelaskuri = new Pistelaskuri();
-        
     }
     
     @BeforeClass
@@ -68,11 +67,24 @@ public class PistelaskuriTest {
     public void voikoElamatOllaAlleNollan() {
         assertTrue(pistelaskuri.elamat >= 0);
     }
-     
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    @Test
+    public void kenttaKasvaaKasvatettaessaYhdella() {
+        pistelaskuri.seuraavaKentta();
+        assertEquals(2, pistelaskuri.kentanNumero);
+    }
+    
+    @Test
+    public void tavallisetPisteetKasvavatNormaalisti() {
+        pistelaskuri.lisaaNormaalitPisteet();
+        assertEquals(50, pistelaskuri.pisteet);
+    }
+    
+    @Test
+    public void erikoisPisteetKasvavatNormaalisti() {
+        pistelaskuri.lisaaErikoisPisteet();
+        assertEquals(100, pistelaskuri.pisteet);
+    }
+    
+    
 }
