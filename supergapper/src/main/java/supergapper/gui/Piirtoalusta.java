@@ -35,7 +35,6 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         g.fillRect(10 * sipsiorkki.getX(), 10 * sipsiorkki.getY(), 10, 10);
         
         g.setColor(Color.RED);
-        
         g.drawLine(15, 15, 15, 505);
         g.drawLine(15, 15, 505, 15);
         g.drawLine(15, 505, 505, 505);
