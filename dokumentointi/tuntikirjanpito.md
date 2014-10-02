@@ -58,4 +58,4 @@ viikko 5
 
 01.10 ke - 0h. 
 
-02.10 to - 3h. Uudistettu UML-kaavio.
+02.10 to - 3h. Uudistettu UML-kaavio. Coberturan ja PITin konfigurointia.
