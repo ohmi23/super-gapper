@@ -94,8 +94,4 @@ public class Gapperpeli extends Timer implements ActionListener {
         
         
     }
-    
-    
-    
-    
 }
