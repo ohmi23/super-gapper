@@ -54,4 +54,8 @@ viikko 5
 
 29.09 ma - 5h. Päivitetty Windowsin Netbeans 7.4 -> 8.01 ja implementoitu näppäimistönkuuntelijaa ja käyttöliittymää.
 
-30.09 ti - xh. Kirjoitettu Pistelaskurille testejä. Kehitetty käyttöliittymää.
+30.09 ti - 3h. Kirjoitettu Pistelaskurille testejä. Kehitetty käyttöliittymää. Ensimmäinen prototyyppi graafiikasta.
+
+01.10 ke - 0h. 
+
+02.10 to - 3h. Uudistettu UML-kaavio.
