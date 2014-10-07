@@ -11,20 +11,22 @@ public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
     private Gapperpeli gapperpeli;
-    private int sivunpituus;
+    private int sivunPituus;
+    private int sivunLeveys;
     private Piirtoalusta piirtoalusta;
 
-    public Kayttoliittyma(Gapperpeli gapperpeli, int sivunpituus) {
+    public Kayttoliittyma(Gapperpeli gapperpeli, int sivunpituus, int sivunleveys) {
         this.gapperpeli = gapperpeli;
-        this.sivunpituus = sivunpituus;
+        this.sivunPituus = sivunpituus;
+        this.sivunLeveys = sivunleveys;
     }
 
     @Override
     public void run() {
-        frame = new JFrame("Supergapper 2014 (v0.1)" + " (" + this.sivunpituus + "x" + this.sivunpituus + ")");
-        int sivunPituus = this.sivunpituus;
-        int sivunKorkeus = this.sivunpituus;
-        frame.setPreferredSize(new Dimension(sivunPituus, sivunKorkeus));
+        frame = new JFrame("Supergapper 2014 (v0.1)" + " (" + this.sivunPituus + "x" + this.sivunLeveys + ")");
+        int sivunPituus = this.sivunPituus;
+        int sivunLeveys = this.sivunLeveys;
+        frame.setPreferredSize(new Dimension(sivunPituus, sivunLeveys));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
@@ -35,7 +37,7 @@ public class Kayttoliittyma implements Runnable {
     }
 
     public void luoKomponentit(Container container) {
-        piirtoalusta = new Piirtoalusta(gapperpeli, 600);
+        piirtoalusta = new Piirtoalusta(gapperpeli, 600, 800);
         container.add(piirtoalusta);
         Nappaimistonkuuntelija n = new Nappaimistonkuuntelija(gapperpeli.getGapper());
         getFrame().addKeyListener(n);

@@ -22,7 +22,6 @@ public class Gapperpeli extends Timer implements ActionListener {
     
     public Gapperpeli(int leveys, int korkeus) {
         super(1000, null); // Timer
-        
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
@@ -31,12 +30,11 @@ public class Gapperpeli extends Timer implements ActionListener {
         setInitialDelay(2000);
         
         this.kentta = new Kentta(leveys, korkeus);
-        this.gapper = new Gapper(0,0, Suunta.OIKEA);
-        this.seeker = new Seeker(50,50, Suunta.VASEN); // Tai Superseeker jossa AI.
+        this.gapper = new Gapper(10,10, Suunta.OIKEA);
+        this.seeker = new Seeker(760,510, Suunta.VASEN); // Tai Superseeker jossa AI.
    }
     
     // To do: 
-    
     // JUnit testit testaavat onko kenttä oikean kokoinen yms.
     // Näppäimistönkuuntelija 
     // käyttöliittymä

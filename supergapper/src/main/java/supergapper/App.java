@@ -12,7 +12,7 @@ public class App
         Gapperpeli gapperpeli = new Gapperpeli(3,3); 
         // Käynnistetään gapperpeli 3 x 3 kokoisena.
         
-        Kayttoliittyma kali = new Kayttoliittyma(gapperpeli, 800);
+        Kayttoliittyma kali = new Kayttoliittyma(gapperpeli, 800, 600);
         SwingUtilities.invokeLater(kali);
         
         while (kali.getPaivitettava() == null) {
