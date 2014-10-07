@@ -31,7 +31,9 @@ public class Gapperpeli extends Timer implements ActionListener {
         
         this.kentta = new Kentta(leveys, korkeus);
         this.gapper = new Gapper(10,10, Suunta.OIKEA);
-        this.seeker = new Seeker(760,500, Suunta.VASEN); // Tai Superseeker jossa AI.
+        //this.seeker = new Seeker(760,500, Suunta.VASEN); // Tai Superseeker jossa AI.
+        this.seeker = new Seeker(60,60, Suunta.VASEN);
+        
    }
     
     // To do: 
@@ -85,6 +87,9 @@ public class Gapperpeli extends Timer implements ActionListener {
         }
         gapper.liiku();
         seeker.jahtaa(gapper);
+        //seeker.pakene(gapper);
+        
+        
         // Jos Gapper osuu seinään, se jää paikalleen.
         // Jos gapper osuu Seekeriin jatkuu = false.
         // Tarkistetaan onko kaikkialla käyty, jos on niin uusi kenttä.

@@ -15,11 +15,11 @@ public class Liikkuja {
     }
 
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public Suunta getSuunta() {
@@ -38,11 +38,15 @@ public class Liikkuja {
 
         if (suunta == Suunta.OIKEA) {
             this.x++;
+            this.x++;
         } else if (suunta == Suunta.VASEN) {
+            this.x--;
             this.x--;
         } else if (suunta == Suunta.ALAS) {
             this.y++;
+            this.y++;
         } else if (suunta == Suunta.YLOS) {
+            this.y--;
             this.y--;
         } else if (suunta == Suunta.TYHJA) {
             return;
@@ -60,7 +64,27 @@ public class Liikkuja {
         } else if (gapper.getY() > this.y)  {
             this.y++;
         }
+    }
+    
+    public void pakene(Gapper gapper) {
+        // Seeker käyttää pakene-metodia.        
+        if (gapper.getX() < this.x) {
+            this.x++;
+        } else if (gapper.getX() > this.x) {
+            this.x--;
+        } else if (gapper.getY() < this.y) {
+            this.y++;
+        } else if (gapper.getY() > this.y)  {
+            this.y--;
+        }
+    }
+    
+    
+    public double etaisyys(Gapper gapper) {
+        int xd = this.x - gapper.getX();
+        int yd = this.y - gapper.getY();
 
+        return Math.sqrt((xd * xd) + (yd * yd));
     }
 
 }
