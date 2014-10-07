@@ -28,20 +28,41 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        piirraGapper(g);
+        piirraSeeker(g);
+        piirraKentta(g);
+        piirraPisteet(g);
+    }
+
+    public void piirraGapper (Graphics g) {
         g.setColor(Color.MAGENTA);
         Gapper gapperi = peli.getGapper();
         g.fillOval(gapperi.getX(), gapperi.getY(), 10, 10);
-
-        Seeker sipsiorkki = peli.getSeeker();
+    }
+    
+    public void piirraSeeker (Graphics g) {
         g.setColor(Color.CYAN);
+        Seeker sipsiorkki = peli.getSeeker();
         g.fillRect(sipsiorkki.getX(), sipsiorkki.getY(), 10, 10);
-        
+    }
+    
+    
+    
+    
+    public void piirraKentta(Graphics g) {
         g.setColor(Color.RED);
-        g.drawLine(15, 15, 15, 505);
-        g.drawLine(15, 15, 505, 15);
-        g.drawLine(15, 505, 505, 505);
-        g.drawLine(505, 15, 505, 505);
         
+        
+        
+        g.drawLine(15, 15, 15, 505); // vasen sivu
+        g.drawLine(15, 15, 765, 15); // yläkansi
+        g.drawLine(15, 505, 765, 505); // alakansi
+        g.drawLine(765, 15, 765, 505); // oikea sivu
+    
+    }
+    
+    public void piirraPisteet(Graphics g) {
+        //pistetaulun päivitys
     }
     
     
