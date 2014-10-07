@@ -17,7 +17,7 @@ public class App
         
         while (kali.getPaivitettava() == null) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException ex) {
                 System.out.println("Piirtoalustaa ei ole vielä luotu.");
             }

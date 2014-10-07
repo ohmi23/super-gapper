@@ -53,7 +53,7 @@ public class Liikkuja {
     }
     
     public void jahtaa() {
-                
+        // Seeker käyttää jahtaa-metodia.        
         
         
     }
