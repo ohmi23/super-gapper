@@ -39,6 +39,20 @@ public class Liikkuja {
     
     public void liiku() {
         
+        
+        
+        if (suunta == suunta.OIKEA) {
+            this.x++;
+        } else if (suunta == suunta.VASEN) {
+            this.x--;
+        } else if (suunta == suunta.ALAS) {
+            this.y++;
+        } else if (suunta == suunta.YLOS) {
+            this.y--;
+        } else if (suunta == suunta.TYHJA) {
+            return;
+        }
+        //System.out.println(this.x + " ja " + this.y);
     }
     
         
