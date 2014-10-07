@@ -11,11 +11,13 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
 
     private Gapperpeli peli;
     private int sivunPituus;
+    private int sivunLeveys;
     
-    public Piirtoalusta(Gapperpeli peli, int sivunPituus) {
+    public Piirtoalusta(Gapperpeli peli, int sivunPituus, int sivunLeveys) {
         super.setBackground(Color.BLACK);
         this.peli = peli;
         this.sivunPituus = sivunPituus;
+        this.sivunLeveys = sivunLeveys;
     }
     
     @Override
@@ -28,11 +30,11 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         super.paintComponent(g);
         g.setColor(Color.MAGENTA);
         Gapper gapperi = peli.getGapper();
-        g.fillOval(10 * gapperi.getX()+10, 10 * gapperi.getY()+10, 10, 10);
+        g.fillOval(gapperi.getX(), gapperi.getY(), 10, 10);
 
         Seeker sipsiorkki = peli.getSeeker();
         g.setColor(Color.CYAN);
-        g.fillRect(10 * sipsiorkki.getX(), 10 * sipsiorkki.getY(), 10, 10);
+        g.fillRect(sipsiorkki.getX(), sipsiorkki.getY(), 10, 10);
         
         g.setColor(Color.RED);
         g.drawLine(15, 15, 15, 505);
