@@ -12,7 +12,7 @@ public class Liikkuja {
         this.x = x;
         this.y = y;
         this.suunta = suunta;
-        this.nopeus = 1; // Gapper aina nopeampi kuin Seeker tai yhtä nopea.
+        this.nopeus = 100; // Gapper aina nopeampi kuin Seeker tai yhtä nopea.
     }
 
     public int getX() {
@@ -39,8 +39,6 @@ public class Liikkuja {
     
     public void liiku() {
         
-        
-        
         if (suunta == suunta.OIKEA) {
             this.x++;
         } else if (suunta == suunta.VASEN) {
@@ -52,7 +50,12 @@ public class Liikkuja {
         } else if (suunta == suunta.TYHJA) {
             return;
         }
-        //System.out.println(this.x + " ja " + this.y);
+    }
+    
+    public void jahtaa() {
+                
+        
+        
     }
     
         
