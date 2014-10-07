@@ -84,6 +84,7 @@ public class Gapperpeli extends Timer implements ActionListener {
             return;
         }
         gapper.liiku();
+        seeker.jahtaa(gapper);
         // Jos Gapper osuu seinään, se jää paikalleen.
         // Jos gapper osuu Seekeriin jatkuu = false.
         // Tarkistetaan onko kaikkialla käyty, jos on niin uusi kenttä.

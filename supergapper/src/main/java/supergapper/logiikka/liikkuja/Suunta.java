@@ -2,10 +2,11 @@ package supergapper.logiikka.liikkuja;
     
 public enum Suunta {
  
-    // Näppäimistönkuuntelijaa varten suunta-enumit, 
-    // TYHJA on tyhjakäynti jossa ei liikuta vaan ollaan paikallaan 
-    // paikallaan tarvii olla kun osuu seinään.
-    
+    /*
+    Näppäimistönkuuntelijaa varten suunta-enumit, 
+    TYHJA on tyhjakäynti jossa ei liikuta vaan ollaan paikallaan 
+    paikallaan tarvii olla kun osuu seinään.
+    */
     
     YLOS(0, -1),
     ALAS(0, 1),
