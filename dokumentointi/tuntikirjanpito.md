@@ -59,3 +59,9 @@ viikko 5
 01.10 ke - 0h. 
 
 02.10 to - 3h. Uudistettu UML-kaavio. Coberturan ja PITin konfigurointia.
+
+03.10 pe - 0h.
+
+06.10 ma - 0h.
+
+07.10 ti - 2h. Gapper liikkuu, mutta ei vielä tunne kenttää. Eka PIT-raportti saatu generoitua.
