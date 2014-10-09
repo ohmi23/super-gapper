@@ -7,28 +7,29 @@ public class Kentta {
 
     private int leveys; // 800
     private int korkeus; // 600
-    private List<Ruutu> ruudut;
-    private List<Tronviiva> tronviivat;
     private int ruutujenMaara;
     private int viivojenMaara;
+    private List<Ruutu> ruudut;
+    private List<Tronviiva> tronviivat;
+    
 
     public Kentta(int leveys, int korkeus) {
         this.leveys = leveys;
         this.korkeus = korkeus;
-        this.ruudut = new ArrayList<Ruutu>();
-        this.tronviivat = new ArrayList<Tronviiva>();
         this.ruutujenMaara = 9;
         this.viivojenMaara = 24;
+        this.ruudut = new ArrayList<Ruutu>();
+        this.tronviivat = new ArrayList<Tronviiva>();
     }
 
     public void luoKentta(int kentanNumero) {
         if (kentanNumero == 1) {
-            this.ruutujenMaara = 9;
-            this.viivojenMaara = 24;
+            setRuutujenMaara(9);
+            setViivojenMaara(24);
             luoRuudutJaViivat(this.ruutujenMaara, this.viivojenMaara);
         } else if (kentanNumero == 2) {
-            this.ruutujenMaara = 16;
-            this.viivojenMaara = 40;
+            setRuutujenMaara(16);
+            setViivojenMaara(40);
             luoRuudutJaViivat(this.ruutujenMaara, this.viivojenMaara);
         } else {
             this.ruutujenMaara = 9;
@@ -53,4 +54,31 @@ public class Kentta {
             tronviivat.get(i).toString();
         }
     }
+    
+    /*
+    Getterit
+    */
+    
+    
+    public int getRuutujenMaara() {
+        return ruutujenMaara;
+    }
+    
+    public int getViivojenMaara() {
+        return viivojenMaara;
+    }
+    
+    /*
+    Setterit
+    */
+
+    public void setRuutujenMaara(int ruutujenMaara) {
+        this.ruutujenMaara = ruutujenMaara;
+    }
+
+    public void setViivojenMaara(int viivojenMaara) {
+        this.viivojenMaara = viivojenMaara;
+    }
+    
+    
 }
