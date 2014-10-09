@@ -16,6 +16,7 @@ public class Kentta {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.ruudut = new ArrayList<Ruutu>();
+        this.tronviivat = new ArrayList<Tronviiva>();
         this.ruutujenMaara = 9;
         this.viivojenMaara = 24;
     }
@@ -42,7 +43,7 @@ public class Kentta {
         }
 
         for (int i = 0; i < viivojenMaara; i++) {
-            //tronviivat.add(new Tronviiva());
+            tronviivat.add(new Tronviiva());
         }
 
     }
@@ -52,5 +53,4 @@ public class Kentta {
             tronviivat.get(i).toString();
         }
     }
-
 }
