@@ -14,6 +14,7 @@ public class Gapperpeli extends Timer implements ActionListener {
 
     private int korkeus;
     private int leveys;
+    private int kentanNumero;
     private boolean jatkuu;
     private Kentta kentta;
     private Gapper gapper;
@@ -25,11 +26,13 @@ public class Gapperpeli extends Timer implements ActionListener {
         this.leveys = leveys;
         this.korkeus = korkeus;
         this.jatkuu = true;
+        this.kentanNumero = 1;
         
         addActionListener(this);
-        setInitialDelay(2000);
+        setInitialDelay(1000);
         
         this.kentta = new Kentta(leveys, korkeus);
+        this.kentta.luoKentta(this.kentanNumero);
         this.gapper = new Gapper(10,10, Suunta.OIKEA);
         //this.seeker = new Seeker(760,500, Suunta.VASEN); // Tai Superseeker jossa AI.
         this.seeker = new Seeker(60,60, Suunta.VASEN);
