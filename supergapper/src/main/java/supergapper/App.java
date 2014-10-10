@@ -8,7 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *  \n Morjensta. Tervetuloa pelaamaan Super-Gapperia! \n * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+        System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");
+        System.out.println("Morjensta. Tervetuloa pelaamaan Super-Gapperia!");
+        System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");
         Gapperpeli gapperpeli = new Gapperpeli(1); 
         // Käynnistetään gapperpeli kentässä 1.
         

@@ -32,13 +32,20 @@ public class Kentta {
             setViivojenMaara(40);
             luoRuudutJaViivat(this.ruutujenMaara, this.viivojenMaara);
         } else {
-            this.ruutujenMaara = 9;
-            this.viivojenMaara = 24;
-            return;
+            setRuutujenMaara(9);
+            setViivojenMaara(24);
+            luoRuudutJaViivat(this.ruutujenMaara, this.viivojenMaara);
         }
     }
+    
+    /*
+    luoRuudutJaViivat-metodi luo kaksi listaa.
+    Yhden ruutuja varten.
+    Yhden viivoja varten.
+    */
 
     public void luoRuudutJaViivat(int ruutujenMaara, int viivojenMaara) {
+ 
         for (int i = 0; i < ruutujenMaara; i++) { 
             this.ruudut.add(new Ruutu());
         }
@@ -46,7 +53,6 @@ public class Kentta {
         for (int i = 0; i < viivojenMaara; i++) {
             tronviivat.add(new Tronviiva());
         }
-
     }
 
     public void listaaTronviivat() {
