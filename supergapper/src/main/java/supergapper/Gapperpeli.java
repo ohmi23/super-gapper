@@ -12,26 +12,24 @@ import supergapper.logiikka.liikkuja.Suunta;
 
 public class Gapperpeli extends Timer implements ActionListener { 
 
-    private int korkeus;
-    private int leveys;
     private int kentanNumero;
+    private int kentanLeveys;
+    private int kentanKorkeus;
     private boolean jatkuu;
     private Kentta kentta;
     private Gapper gapper;
     private Seeker seeker;
     private Paivitettava paivitettava;
     
-    public Gapperpeli(int leveys, int korkeus) {
+    public Gapperpeli(int kentanNumero) {
         super(1000, null); // Timer
-        this.leveys = leveys;
-        this.korkeus = korkeus;
         this.jatkuu = true;
-        this.kentanNumero = 1;
+        this.kentanNumero = this.kentanNumero;
         
         addActionListener(this);
         setInitialDelay(1000);
         
-        this.kentta = new Kentta(leveys, korkeus);
+        this.kentta = new Kentta(kentanLeveys, kentanKorkeus);
         this.kentta.luoKentta(this.kentanNumero);
         this.gapper = new Gapper(10,10, Suunta.OIKEA);
         //this.seeker = new Seeker(760,500, Suunta.VASEN); // Tai Superseeker jossa AI.
@@ -66,15 +64,7 @@ public class Gapperpeli extends Timer implements ActionListener {
     public void setKentta(Kentta kentta) {
         this.kentta = kentta;
     }
-    
-    public int getKorkeus() {
-        return korkeus;
-    }
-    
-    public int getLeveys() {
-        return leveys;
-    }
-    
+            
     public void setPaivitettava(Paivitettava paivitettava) {
         this.paivitettava = paivitettava;
     }

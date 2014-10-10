@@ -8,9 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("Morjensta. Tervetuloa pelaamaan Super-Gapperia! \n ja tässä toinen rivi tekstiä hkans.");
-        Gapperpeli gapperpeli = new Gapperpeli(3,3); 
-        // Käynnistetään gapperpeli 3 x 3 kokoisena.
+        System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * * * * *  \n Morjensta. Tervetuloa pelaamaan Super-Gapperia! \n * * * * * * * * * * * * * * * * * * * * * * * * * * * * ");
+        Gapperpeli gapperpeli = new Gapperpeli(1); 
+        // Käynnistetään gapperpeli kentässä 1.
         
         Kayttoliittyma kali = new Kayttoliittyma(gapperpeli, 800, 600);
         SwingUtilities.invokeLater(kali);
