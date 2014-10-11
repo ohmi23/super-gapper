@@ -32,8 +32,8 @@ public class Gapperpeli extends Timer implements ActionListener {
         this.kentta = new Kentta(kentanLeveys, kentanKorkeus);
         this.kentta.luoKentta(this.kentanNumero);
         this.gapper = new Gapper(10,10, Suunta.OIKEA);
-        //this.seeker = new Seeker(760,500, Suunta.VASEN); // Tai Superseeker jossa AI.
-        this.seeker = new Seeker(60,60, Suunta.VASEN);
+        this.seeker = new Seeker(760,510, Suunta.VASEN); // Tai Superseeker jossa AI.
+        //this.seeker = new Seeker(60,60, Suunta.VASEN);
         
    }
     
