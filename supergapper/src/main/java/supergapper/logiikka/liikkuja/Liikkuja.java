@@ -64,7 +64,7 @@ public class Liikkuja {
             setSuunta(suunta.TYHJA);
         } else if (suunta == Suunta.YLOS && this.y <= 10) {
             setSuunta(suunta.TYHJA);
-        } else if (suunta == Suunta.ALAS && this.y >= 500) {
+        } else if (suunta == Suunta.ALAS && this.y >= 510) {
             setSuunta(suunta.TYHJA);
         }
     }
