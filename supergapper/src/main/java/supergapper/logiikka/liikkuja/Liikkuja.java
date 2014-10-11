@@ -22,6 +22,10 @@ public class Liikkuja {
         return this.y;
     }
 
+    public Koordinaatti koordinaatti() {
+        return this.koordinaatti();
+    }
+
     public Suunta getSuunta() {
         return suunta;
     }
@@ -35,7 +39,7 @@ public class Liikkuja {
     }
 
     public void liiku() {
-
+        tarkistaUlkoSeinat();
         if (suunta == Suunta.OIKEA) {
             this.x++;
             this.x++;
@@ -52,6 +56,18 @@ public class Liikkuja {
             return;
         }
     }
+    
+    public void tarkistaUlkoSeinat() {
+        if (suunta == Suunta.OIKEA && this.x >= 760) {
+            setSuunta(suunta.TYHJA);
+        } else if (suunta == Suunta.VASEN && this.x <= 10) {
+            setSuunta(suunta.TYHJA);
+        } else if (suunta == Suunta.YLOS && this.y <= 10) {
+            setSuunta(suunta.TYHJA);
+        } else if (suunta == Suunta.ALAS && this.y >= 500) {
+            setSuunta(suunta.TYHJA);
+        }
+    }
 
     public void jahtaa(Gapper gapper) {
         // Seeker käyttää jahtaa-metodia.        
@@ -61,11 +77,11 @@ public class Liikkuja {
             this.x++;
         } else if (gapper.getY() < this.y) {
             this.y--;
-        } else if (gapper.getY() > this.y)  {
+        } else if (gapper.getY() > this.y) {
             this.y++;
         }
     }
-    
+
     public void pakene(Gapper gapper) {
         // Seeker käyttää pakene-metodia.        
         if (gapper.getX() < this.x) {
@@ -74,17 +90,16 @@ public class Liikkuja {
             this.x--;
         } else if (gapper.getY() < this.y) {
             this.y++;
-        } else if (gapper.getY() > this.y)  {
+        } else if (gapper.getY() > this.y) {
             this.y--;
         }
     }
-    
-    
-    public double etaisyys(Gapper gapper) {
-        int xd = this.x - gapper.getX();
-        int yd = this.y - gapper.getY();
 
-        return Math.sqrt((xd * xd) + (yd * yd));
-    }
+//    public double etaisyys(Gapper gapper) {
+//        int xd = this.x - gapper.getX();
+//        int yd = this.y - gapper.getY();
+//
+//        return Math.sqrt((xd * xd) + (yd * yd));
+//    }
 
 }
