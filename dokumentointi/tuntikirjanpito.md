@@ -62,10 +62,19 @@ viikko 5
 
 03.10 pe - 0h.
 
+viikko 6
+
 06.10 ma - 0h.
 
 07.10 ti - 2h. Gapper liikkuu, mutta ei vielä tunne kenttää. Eka PIT-raportti saatu generoitua.
 
 08.10 ke - 3h. Seeker liikkuu ja jahtaa gapperia, eivät vielä tunne kenttää.
 
-09.10 to - 
+09.10 to - 1h. 
+
+10.10 pe - 3h. Gapper pysähtyy kentän reunoille.
+
+11.10 la - 4h. Lisätty Gapperin ja Seekerin törmäyksen tarkistaja.
+
+12.10 su - xh.  
+
