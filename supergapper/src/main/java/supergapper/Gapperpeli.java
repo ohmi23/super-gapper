@@ -38,8 +38,6 @@ public class Gapperpeli extends Timer implements ActionListener {
     
     // To do: 
     // JUnit testit testaavat onko kenttä oikean kokoinen yms.
-    // Näppäimistönkuuntelija 
-    // käyttöliittymä
     // Gapper-Seeker törmäysten tarkistaja joka havaitsee törmäyksen ja vähentää elämän, kun elämät loppuvat,
     // Gapperpeli kirjaa pisteet tiedostoon.
     // Gapperpeli päättyy.
@@ -71,6 +69,15 @@ public class Gapperpeli extends Timer implements ActionListener {
     public boolean jatkuu() {
         return jatkuu;
     }
+    
+    public void tarkastaTormaykset(Gapper gapper, Seeker seeker) {
+        if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
+            this.jatkuu = false;
+        } else {
+            this.jatkuu = true;
+        }
+    }
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -78,8 +85,11 @@ public class Gapperpeli extends Timer implements ActionListener {
             return;
         }
         gapper.liiku();
+        tarkastaTormaykset(this.gapper, this.seeker);
         seeker.jahtaa(gapper);
-        //seeker.pakene(gapper);
+        gapper.liiku();
+        tarkastaTormaykset(this.gapper, this.seeker);
+        
         
         
         // Jos Gapper osuu seinään, se jää paikalleen.
@@ -88,7 +98,7 @@ public class Gapperpeli extends Timer implements ActionListener {
                
         
         paivitettava.paivita();
-        setDelay(12); // nopeutetaan kentän mukaan
+        setDelay(8); // nopeutetaan kentän mukaan
         
         
         
