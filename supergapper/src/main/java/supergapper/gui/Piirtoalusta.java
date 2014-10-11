@@ -31,7 +31,7 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
         piirraGapper(g);
         piirraSeeker(g);
         piirraKentanReunat(g);
-        piirraKentanViivat_Level1(g);
+        piirraKentanSisaViivat_Level1(g);
         piirraPisteet(g);
     }
 
@@ -49,7 +49,6 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
 
     public void piirraKentanReunat(Graphics g) {
         g.setColor(Color.RED);
-
         g.drawLine(15, 15, 15, 515); // vasen sivu
         g.drawLine(15, 15, 765, 15); // yläkansi
         g.drawLine(15, 515, 765, 515); // alakansi
@@ -57,7 +56,7 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
 
     }
 
-    public void piirraKentanViivat_Level1(Graphics g) {
+    public void piirraKentanSisaViivat_Level1(Graphics g) {
         g.setColor(Color.RED);
         g.drawLine(265, 15, 265, 515); // vasen pystyviiva
         g.drawLine(515, 15, 515, 515); // oikea pystyviiva
@@ -68,6 +67,13 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
 
     public void piirraPisteet(Graphics g) {
         //pistetaulun päivitys
+        g.setColor(Color.WHITE);
+        g.drawString("SCORE [0]", 100, 540);
+        g.drawString("LIVES [3]", 370, 540);
+        g.drawString("LEVEL [1]", 610, 540);
+        
+        //g.drawLine(15, 530, 765, 530);
+        
     }
 
 }
