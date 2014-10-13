@@ -31,6 +31,11 @@ public class Liikkuja {
     public void setSuunta(Suunta suunta) {
         this.suunta = suunta;
     }
+    
+    public void setSijainti(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
     public int getNopeus() {
         return nopeus;

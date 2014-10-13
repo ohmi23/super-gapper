@@ -68,9 +68,10 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
     public void piirraPisteet(Graphics g) {
         //pistetaulun päivitys
         g.setColor(Color.WHITE);
-        g.drawString("SCORE [0]", 100, 540);
-        g.drawString("LIVES [3]", 370, 540);
-        g.drawString("LEVEL [1]", 610, 540);
+        g.drawString("SCORE [" + peli.getPisteet() + "]", 100, 540);
+        g.drawString("LIVES [" + peli.getElamat() + "]", 370, 540);
+        g.drawString("LEVEL [" + peli.getKentanNumero() + "]", 610, 540);
+        
         
         //g.drawLine(15, 530, 765, 530);
         

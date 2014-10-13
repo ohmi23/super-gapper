@@ -13,6 +13,9 @@ import supergapper.logiikka.liikkuja.Suunta;
 public class Gapperpeli extends Timer implements ActionListener { 
 
     private int kentanNumero;
+    private int elamat;
+    private int pisteet;
+    
     private int kentanLeveys;
     private int kentanKorkeus;
     private boolean jatkuu;
@@ -24,8 +27,9 @@ public class Gapperpeli extends Timer implements ActionListener {
     public Gapperpeli(int kentanNumero) {
         super(1000, null); // Timer
         this.jatkuu = true;
-        this.kentanNumero = this.kentanNumero;
-        
+        this.kentanNumero = kentanNumero;
+        this.elamat = 3;
+        this.pisteet = 0;
         addActionListener(this);
         setInitialDelay(1000);
         
@@ -61,6 +65,25 @@ public class Gapperpeli extends Timer implements ActionListener {
     public void setKentta(Kentta kentta) {
         this.kentta = kentta;
     }
+    
+    public int getKentanNumero() {
+        return this.kentanNumero;
+    }
+    
+    public int getElamat() {
+        return this.elamat;
+    }
+    
+    public int getPisteet() {
+        return this.pisteet;
+    }
+    
+    public void aloitaKenttaAlusta() {
+        this.gapper.setSuunta(Suunta.TYHJA);
+        this.gapper.setSijainti(10, 10);
+        this.seeker.setSijainti(760,510);
+    
+    }
             
     public void setPaivitettava(Paivitettava paivitettava) {
         this.paivitettava = paivitettava;
@@ -72,7 +95,13 @@ public class Gapperpeli extends Timer implements ActionListener {
     
     public void tarkastaTormaykset(Gapper gapper, Seeker seeker) {
         if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
-            this.jatkuu = false;
+            this.elamat--;
+            if (this.elamat > 0) {
+                aloitaKenttaAlusta();
+            } else {
+                this.jatkuu = false;
+            }
+            
         } else {
             this.jatkuu = true;
         }
@@ -89,6 +118,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         seeker.jahtaa(gapper);
         gapper.liiku();
         tarkastaTormaykset(this.gapper, this.seeker);
+        pisteet++;
         
         
         
