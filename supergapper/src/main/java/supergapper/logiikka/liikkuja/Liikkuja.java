@@ -6,12 +6,14 @@ public class Liikkuja {
     private int y;
     private int nopeus;
     private Suunta suunta;
+    private Suunta uusisuunta;
     private int kentta;
 
     public Liikkuja(int x, int y, Suunta suunta) {
         this.x = x;
         this.y = y;
         this.suunta = suunta;
+        this.uusisuunta = suunta;
         this.nopeus = 100; // Gapper aina nopeampi kuin Seeker tai yhtä nopea.
         this.kentta = 1;
     }
@@ -32,6 +34,14 @@ public class Liikkuja {
         this.suunta = suunta;
     }
     
+    public Suunta getUusiSuunta() {
+        return uusisuunta;
+    }
+
+    public void setUusiSuunta(Suunta suunta) {
+        this.uusisuunta = suunta;
+    }
+    
     public void setSijainti(int x, int y) {
         this.x = x;
         this.y = y;
@@ -42,9 +52,9 @@ public class Liikkuja {
     }
 
     public void liiku() {
-        tarkistaSisaSeinat_Level1();
-        tarkistaUlkoSeinat();
-
+        tarkistaSisaSeinat_Level1(suunta);
+        //tarkistaUlkoSeinat();
+        
         if (suunta == Suunta.OIKEA) {
             this.x++;
 
@@ -75,16 +85,17 @@ public class Liikkuja {
         }
     }
     
-    public void tarkistaSisaSeinat_Level1() {
-        if (saakoTastaKaantya(this.x, this.y) == true) {
-            setSuunta(suunta);
+    public void tarkistaSisaSeinat_Level1(Suunta suunta) {
+        if (saakoTastaKaantya_Level1(this.x, this.y) == true) {
+            setSuunta(uusisuunta);
         } else {
-            return;
+            setSuunta(suunta);
         }
     }
     
-    public boolean saakoTastaKaantya(int x, int y) {
-        if (x == 0 || x == 260 || x == 515 || x == 765) {
+    public boolean saakoTastaKaantya_Level1(int x, int y) {
+        if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
+            // y == 10 || y == 170 || y == 345 || y == 515
             return true;
         } else {
             return false;

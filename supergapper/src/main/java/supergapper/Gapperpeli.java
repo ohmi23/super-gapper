@@ -78,7 +78,8 @@ public class Gapperpeli extends Timer implements ActionListener {
     }
     
     public void aloitaKenttaAlusta() {
-        this.gapper.setSuunta(Suunta.TYHJA);
+        this.gapper.setSuunta(Suunta.OIKEA);
+        this.gapper.setUusiSuunta(Suunta.OIKEA);
         this.gapper.setSijainti(10, 10);
         this.seeker.setSijainti(760,510);
     

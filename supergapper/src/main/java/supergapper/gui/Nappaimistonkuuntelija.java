@@ -20,19 +20,19 @@ public class Nappaimistonkuuntelija implements KeyListener {
     @Override
     public void keyPressed(KeyEvent ke) {
         if (ke.getKeyCode() == KeyEvent.VK_UP) {
-            gapper.setSuunta(Suunta.YLOS);
+            gapper.setUusiSuunta(Suunta.YLOS);
             gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_DOWN) {
-            gapper.setSuunta(Suunta.ALAS);
+            gapper.setUusiSuunta(Suunta.ALAS);
             gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_RIGHT) {
-            gapper.setSuunta(Suunta.OIKEA);
+            gapper.setUusiSuunta(Suunta.OIKEA);
             gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_LEFT) {
-            gapper.setSuunta(Suunta.VASEN);
+            gapper.setUusiSuunta(Suunta.VASEN);
             gapper.liiku();
         }
     }
