@@ -53,7 +53,7 @@ public class Liikkuja {
 
     public void liiku() {
         tarkistaSisaSeinat_Level1(suunta);
-        //tarkistaUlkoSeinat();
+        tarkistaUlkoSeinat();
         
         if (suunta == Suunta.OIKEA) {
             this.x++;
@@ -95,33 +95,30 @@ public class Liikkuja {
     
     public boolean saakoTastaKaantya_Level1(int x, int y) {
         if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
-            // y == 10 || y == 170 || y == 345 || y == 515
             return true;
         } else {
             return false;
         }
         
     }
-//        g.drawLine(265, 15, 265, 515); // vasen pystyviiva
-//        g.drawLine(515, 15, 515, 515); // oikea pystyviiva
-//        g.drawLine(15, 170, 765, 170); // ylempi vaakaviiva
-//        g.drawLine(15, 340, 765, 340); // alempi vaakaviiva
-    
-    
 
     public void jahtaa(Gapper gapper) {
-        // Seeker käyttää jahtaa-metodia.        
-        if (gapper.getX() < this.x) {
-            this.x--;
-        } else if (gapper.getX() > this.x) {
-            this.x++;
-        } else if (gapper.getY() < this.y) {
-            this.y--;
-        } else if (gapper.getY() > this.y) {
-            this.y++;
+         
+        if ((gapper.getX() <= this.x)) {
+            this.suunta = suunta.VASEN;
+            liiku();        
+        } else if ((gapper.getX() > this.x)) {
+            this.suunta = suunta.OIKEA;
+            liiku();        
+        } else if ((gapper.getY() <= this.y)) {
+            this.suunta = suunta.YLOS;
+            liiku();
+        } else if ((gapper.getY() > this.y)) {
+            this.suunta = suunta.ALAS;
+            liiku();
         }
     }
-
+    
 //    public void pakene(Gapper gapper) {
 //        // Seeker ei käytä pakene-metodia.        
 //        if (gapper.getX() < this.x) {
