@@ -42,6 +42,7 @@ public class Liikkuja {
     }
 
     public void liiku() {
+        tarkistaSisaSeinat_Level1();
         tarkistaUlkoSeinat();
 
         if (suunta == Suunta.OIKEA) {
@@ -74,11 +75,27 @@ public class Liikkuja {
         }
     }
     
-//    public void tarkistaSisaSeinat_Level1() {
-//        if (suunta == Suunta.OIKEA && this.x >= 760) {
-//            setSuunta(suunta.TYHJA)
-//        }
-//    }
+    public void tarkistaSisaSeinat_Level1() {
+        if (saakoTastaKaantya(this.x, this.y) == true) {
+            setSuunta(suunta);
+        } else {
+            return;
+        }
+    }
+    
+    public boolean saakoTastaKaantya(int x, int y) {
+        if (x == 0 || x == 260 || x == 515 || x == 765) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+//        g.drawLine(265, 15, 265, 515); // vasen pystyviiva
+//        g.drawLine(515, 15, 515, 515); // oikea pystyviiva
+//        g.drawLine(15, 170, 765, 170); // ylempi vaakaviiva
+//        g.drawLine(15, 340, 765, 340); // alempi vaakaviiva
+    
     
 
     public void jahtaa(Gapper gapper) {

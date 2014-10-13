@@ -12,10 +12,9 @@ import supergapper.logiikka.liikkuja.Suunta;
 
 public class Gapperpeli extends Timer implements ActionListener { 
 
-    private int kentanNumero;
-    private int elamat;
     private int pisteet;
-    
+    private int elamat;
+    private int kentanNumero;
     private int kentanLeveys;
     private int kentanKorkeus;
     private boolean jatkuu;
@@ -107,6 +106,17 @@ public class Gapperpeli extends Timer implements ActionListener {
         }
     }
     
+    
+    /*
+    Gapper liikkuu kahdesti
+    Seeker liikkuu kerran
+    Jos Gapper osuu seinään, se jää paikalleen.
+    Jos gapper osuu Seekeriin vähennetään elämä ja aloitetaan kentta alusta.
+    Jos elämät menevät nollaan, peli päättyy.
+    to do: Tarkistetaan onko kaikkialla käyty, jos on niin uusi kenttä.
+    to do: nopeuden säätö
+    */
+    
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -120,18 +130,8 @@ public class Gapperpeli extends Timer implements ActionListener {
         tarkastaTormaykset(this.gapper, this.seeker);
         pisteet++;
         
-        
-        
-        // Jos Gapper osuu seinään, se jää paikalleen.
-        // Jos gapper osuu Seekeriin jatkuu = false.
-        // Tarkistetaan onko kaikkialla käyty, jos on niin uusi kenttä.
-               
-        
         paivitettava.paivita();
         setDelay(8); // nopeutetaan kentän mukaan
-        
-        
-        
         
     }
 }
