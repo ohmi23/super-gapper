@@ -96,8 +96,9 @@ public class Gapperpeli extends Timer implements ActionListener {
     public void tarkastaTormaykset(Gapper gapper, Seeker seeker) {
         if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
             this.elamat--;
+            aloitaKenttaAlusta();
             if (this.elamat > 0) {
-                aloitaKenttaAlusta();
+                this.jatkuu = true;
             } else {
                 this.jatkuu = false;
             }
@@ -127,6 +128,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         gapper.liiku();
         tarkastaTormaykset(this.gapper, this.seeker);
         seeker.jahtaa(gapper);
+        tarkastaTormaykset(this.gapper, this.seeker);
         gapper.liiku();
         tarkastaTormaykset(this.gapper, this.seeker);
         pisteet++;
