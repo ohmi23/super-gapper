@@ -76,5 +76,8 @@ viikko 6
 
 11.10 la - 4h. Lisätty Gapperin ja Seekerin törmäyksen tarkistaja.
 
-12.10 su - xh.  
+12.10 su - 1h.
 
+Viikko 7
+
+13.10 ma - 6h. Seeker jahtaa Gapperia ja pysyy ruudukon sisällä.
