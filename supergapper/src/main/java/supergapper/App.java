@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
+        /*
+        Main luokka luo ja käynnistää gapperpelin ja käyttöliittymän.
+        */
+        
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");
         System.out.println("Morjensta. Tervetuloa pelaamaan Super-Gapperia!");
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");

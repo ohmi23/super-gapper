@@ -1,7 +1,18 @@
 package supergapper.logiikka.liikkuja;
 
+/**
+ * Liikkuja-luokka on luokka jonka ilmentymiä Gapper ja Seeker molemmat ovat.
+ *
+ */
 public class Liikkuja {
 
+    /**
+     * Liikkujalla on sijainnin ja suunnan ilmaisevat parametrit.
+     *
+     * @param int x sijanti x-akselilla
+     * @param int y sijanti y-akselilla
+     * @param Suunta enum
+     */
     private int x;
     private int y;
     private int nopeus;
@@ -51,6 +62,12 @@ public class Liikkuja {
         return nopeus;
     }
 
+    /**
+     * Liiku-metodi tarkistaa ensin ollaanko kentän sisäpuolella tai reunoilla.
+     * Sitten tarkistetaan ollaanko sisäseinien suhteen oikeilla raiteilla. Jos
+     * ehdot täyttyvät, liikutaan annettuun suuntaan yksi pikseli. Jos suunta on
+     * tyhjä, ei liikuta.
+     */
     public void liiku() {
         tarkistaSisaSeinat_Level1(suunta);
         tarkistaUlkoSeinat();
@@ -73,6 +90,9 @@ public class Liikkuja {
 
     }
 
+    /**
+     * liiku-metodin apumetodi
+     */
     public void tarkistaUlkoSeinat() {
         if (suunta == Suunta.OIKEA && this.x == 760) {
             setSuunta(suunta.TYHJA);
@@ -84,6 +104,10 @@ public class Liikkuja {
             setSuunta(suunta.TYHJA);
         }
     }
+    
+    /**
+     * liiku-metodin apumetodi kentälle 1.
+     */
 
     public void tarkistaSisaSeinat_Level1(Suunta suunta) {
         if (saakoTastaKaantya_Level1(this.x, this.y) == true) {
@@ -92,6 +116,10 @@ public class Liikkuja {
             setSuunta(suunta);
         }
     }
+    
+    /**
+     * apumetodi
+     */
 
     public boolean saakoTastaKaantya_Level1(int x, int y) {
         if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
@@ -101,6 +129,12 @@ public class Liikkuja {
         }
 
     }
+    
+    /**
+     * Seekerin "tekoälyn" sisältävä jahtausmetodi.
+     * @param Gapper gapper
+     */
+
 
     public void jahtaa(Gapper gapper) {
         if ((gapper.getX() < this.x)) {
@@ -115,7 +149,6 @@ public class Liikkuja {
             this.uusisuunta = suunta.TYHJA;
         }
         liiku();
-        
 
     }
 

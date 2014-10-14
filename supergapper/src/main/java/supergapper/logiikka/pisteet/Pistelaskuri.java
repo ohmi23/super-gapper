@@ -1,12 +1,9 @@
 package supergapper.logiikka.pisteet;
 
-/*
- luokan kuvaus - javadoc
-
- Pistelaskuri-luokan tiedot näytetään käyttöliittymän alareunassa.
- Luokka muistaa Kentän numeron, pisteet ja elämät.
-
-*/
+/**
+ * Pistelaskuri-luokka pitää kirjaa kentästä, pisteistä ja elämistä. 
+ * Luokan tiedot näytetään käyttöliittymän alareunassa.
+ */
 
 public class Pistelaskuri {
 

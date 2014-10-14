@@ -10,6 +10,13 @@ import supergapper.logiikka.liikkuja.Seeker;
 import supergapper.logiikka.kentta.Kentta;
 import supergapper.logiikka.liikkuja.Suunta;
 
+/**
+ * Gapperpeli-luokka 
+Gapperpeli luo Gapperin, Seekerin ja Kenttäluokan ilmentymät.
+@param kentannumero Main-luokan antama aloituskentän numero
+*/
+
+
 public class Gapperpeli extends Timer implements ActionListener { 
 
     private int pisteet;
@@ -77,6 +84,10 @@ public class Gapperpeli extends Timer implements ActionListener {
         return this.pisteet;
     }
     
+    /*
+    aloitaKenttaAlusta-metodi käynnistää kentän alusta ja palauttaa gapperin ja seekerin alkoitussijaintiinsa.
+    */
+        
     public void aloitaKenttaAlusta() {
         this.gapper.setSuunta(Suunta.OIKEA);
         this.gapper.setUusiSuunta(Suunta.OIKEA);
@@ -93,6 +104,12 @@ public class Gapperpeli extends Timer implements ActionListener {
         return jatkuu;
     }
     
+    /*
+    tarkastaTormaykset-metodi tarkastaa sijaitseeko gapper samassa koordinaatissa kuin seeker
+    jos koordinaatti on sama, vähennetään yksi elämä
+    jos elämät loppuvat, peli päättyy.
+    */
+    
     public void tarkastaTormaykset(Gapper gapper, Seeker seeker) {
         if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
             this.elamat--;
@@ -105,6 +122,8 @@ public class Gapperpeli extends Timer implements ActionListener {
     
     
     /*
+    Gapperpelin tapahtumia tarkkaileva actionPerformed-metodi.
+    
     Gapper liikkuu kahdesti
     Seeker liikkuu kerran
     Jos Gapper osuu seinään, se jää paikalleen.
@@ -126,7 +145,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         tarkastaTormaykset(this.gapper, this.seeker);
         gapper.liiku();
         tarkastaTormaykset(this.gapper, this.seeker);
-        pisteet++;
+        //pisteet++;
         
         paivitettava.paivita();
         setDelay(4); // nopeutetaan kentän mukaan

@@ -7,6 +7,11 @@ import supergapper.Gapperpeli;
 import supergapper.logiikka.liikkuja.Gapper;
 import supergapper.logiikka.liikkuja.Seeker;
 
+/**
+ * Piirtoalusta-luokka.
+ */
+
+
 public class Piirtoalusta extends JPanel implements Paivitettava {
 
     private Gapperpeli peli;

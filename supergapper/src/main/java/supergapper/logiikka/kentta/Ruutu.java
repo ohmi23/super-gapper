@@ -1,5 +1,10 @@
 package supergapper.logiikka.kentta;
 
+/**
+ * Ruutu-luokka
+ * 
+ */
+
 public class Ruutu {
 
     private int pisteluku;

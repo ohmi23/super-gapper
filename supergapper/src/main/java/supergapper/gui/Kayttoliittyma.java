@@ -7,6 +7,15 @@ import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 import supergapper.Gapperpeli;
 
+/**
+ * Kayttoliittyma-luokka 
+ * Kayttoliittyma 
+ * @param gapperpeli gapperpeli
+ * @param sivunpituus
+ * @param sivunleveys 
+ */
+
+
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;

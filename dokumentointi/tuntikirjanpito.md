@@ -81,3 +81,11 @@ viikko 6
 Viikko 7
 
 13.10 ma - 6h. Seeker jahtaa Gapperia ja pysyy ruudukon sisällä.
+
+14.10 ti - 3h. Demotilaisuus. Demoefekti on totta. demotilaisuudessa videotykki toimii muuten moitteettomasti paitsi että punainen värikanava ei toimi. Tehty hieman Javadoc-merkintöjä.
+
+15.10 ke - xh.
+
+16.10 to - xh.
+
+17.10 pe - xh.

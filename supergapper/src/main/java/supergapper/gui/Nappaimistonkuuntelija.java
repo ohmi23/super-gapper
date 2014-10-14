@@ -5,9 +5,14 @@ import java.awt.event.KeyListener;
 import supergapper.logiikka.liikkuja.Gapper;
 import supergapper.logiikka.liikkuja.Suunta;
 
+/**
+ * Näppäimistönkuuntelija-luokka.
+ * 
+ */
+
 public class Nappaimistonkuuntelija implements KeyListener {
 
-    Gapper gapper;
+    private Gapper gapper;
 
     public Nappaimistonkuuntelija(Gapper gapper) {
         this.gapper = gapper;

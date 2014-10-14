@@ -3,6 +3,11 @@ package supergapper.logiikka.kentta;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Kentta-luokka
+ * 
+ */
+
 public class Kentta {
 
     private int leveys; // 800

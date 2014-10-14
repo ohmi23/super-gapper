@@ -1,5 +1,10 @@
 package supergapper.logiikka.kentta;
 
+/**
+ * Tronviiva-luokka
+ * 
+ */
+
 public class Tronviiva {
     
     private int[] resoluutio;

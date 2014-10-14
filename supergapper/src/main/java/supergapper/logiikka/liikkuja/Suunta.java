@@ -1,4 +1,8 @@
 package supergapper.logiikka.liikkuja;
+
+/**
+ * Suunta enum.
+ */
     
 public enum Suunta {
  
