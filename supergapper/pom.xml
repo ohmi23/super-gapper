@@ -45,11 +45,17 @@
                 <configuration>
                     <targetClasses>
                         <param>supergapper.*</param>
-                        <param>supergapper.logiikka.*</param>
+                        <param>supergapper.gui.*</param>
+                        <param>supergapper.logiikka.kentta.*</param>
+                        <param>supergapper.logiikka.liikkuja.*</param>
+                        <param>supergapper.logiikka.pisteet.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>supergapper.*</param>
-                        <param>supergapper.logiikka.*</param>
+                        <param>supergapper.gui.*</param>
+                        <param>supergapper.logiikka.kentta.*</param>
+                        <param>supergapper.logiikka.liikkuja.*</param>
+                        <param>supergapper.logiikka.pisteet.*</param>
                     </targetTests>
                 </configuration>
             </plugin>

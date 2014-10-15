@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package supergapper.logiikka.liikkuja;
 
 import org.junit.After;
@@ -18,7 +13,10 @@ import static org.junit.Assert.*;
  */
 public class SuuntaTest {
     
+    private Suunta suunta;
+    
     public SuuntaTest() {
+        this.suunta = suunta.TYHJA;
     }
     
     @BeforeClass
@@ -36,10 +34,56 @@ public class SuuntaTest {
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void onkoSuuntaAlussaTyhja() {
+        assertTrue(suunta == suunta.TYHJA);
+    }
+    
+    @Test
+    public void onkoSuuntaOikea() {
+        this.suunta = suunta.OIKEA;
+        assertTrue(suunta == suunta.OIKEA);
+    }
+    
+    @Test
+    public void onkoSuuntaVasen() {
+        this.suunta = suunta.VASEN;
+        assertTrue(suunta == suunta.VASEN);
+    }
+    
+    @Test
+    public void onkoSuuntaYlos() {
+        this.suunta = suunta.YLOS;
+        assertTrue(suunta == suunta.YLOS);
+    }
+    
+    @Test
+    public void onkoSuuntaAlas() {
+        this.suunta = suunta.ALAS;
+        assertTrue(suunta == suunta.ALAS);
+    }
+    
+    @Test
+    public void onkoSuuntaOikeaSarja1() {
+        this.suunta = suunta.YLOS;
+        this.suunta = suunta.ALAS;
+        this.suunta = suunta.YLOS;
+        this.suunta = suunta.ALAS;
+        this.suunta = suunta.OIKEA;
+        assertTrue(suunta == suunta.OIKEA);
+    }
+    
+    @Test
+    public void onkoSuuntaOikeaSarja2() {
+        this.suunta = suunta.VASEN;
+        this.suunta = suunta.ALAS;
+        this.suunta = suunta.OIKEA;
+        this.suunta = suunta.YLOS;
+        this.suunta = suunta.OIKEA;
+        assertTrue(suunta == suunta.OIKEA);
+    }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    
+    
 }
