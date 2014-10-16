@@ -142,7 +142,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         //pisteet++;
         
         paivitettava.paivita();
-        setDelay(4); // nopeutetaan kentän mukaan
+        setDelay(5); // nopeutetaan kentän mukaan
         
     }
 }

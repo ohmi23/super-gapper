@@ -21,24 +21,25 @@ public class Nappaimistonkuuntelija implements KeyListener {
     @Override
     public void keyTyped(KeyEvent ke) {
     }
+    
+    /*
+    Nuolinäppäimet asettavat gapperille uuden suunnan.
+    */
+    
 
     @Override
     public void keyPressed(KeyEvent ke) {
         if (ke.getKeyCode() == KeyEvent.VK_UP) {
             gapper.setUusiSuunta(Suunta.YLOS);
-            gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_DOWN) {
             gapper.setUusiSuunta(Suunta.ALAS);
-            gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_RIGHT) {
             gapper.setUusiSuunta(Suunta.OIKEA);
-            gapper.liiku();
         }
         if (ke.getKeyCode() == KeyEvent.VK_LEFT) {
             gapper.setUusiSuunta(Suunta.VASEN);
-            gapper.liiku();
         }
     }
 

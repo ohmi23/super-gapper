@@ -8,14 +8,12 @@ import javax.swing.WindowConstants;
 import supergapper.Gapperpeli;
 
 /**
- * Kayttoliittyma-luokka 
- * Kayttoliittyma 
+ * Kayttoliittyma-luokka joka käyttää näppäimistönkuuntelijaa, päivitettävää ja piirtoalustaa.
+ *
  * @param gapperpeli gapperpeli
  * @param sivunpituus
- * @param sivunleveys 
+ * @param sivunleveys
  */
-
-
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
@@ -39,27 +37,27 @@ public class Kayttoliittyma implements Runnable {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         luoKomponentit(frame.getContentPane());
-        
+
         frame.pack();
         frame.setVisible(true);
 
     }
 
+    /*
+     Luodaan komponentit piirtoalusta ja näppäimistönkuuntelija.
+     */
     public void luoKomponentit(Container container) {
-        
         piirtoalusta = new Piirtoalusta(gapperpeli, this.sivunPituus, this.sivunLeveys);
-        //piirtoalusta = new Piirtoalusta(gapperpeli, 600, 800);
         container.add(piirtoalusta);
         Nappaimistonkuuntelija n = new Nappaimistonkuuntelija(gapperpeli.getGapper());
         getFrame().addKeyListener(n);
-
     }
-    
+
     public Paivitettava getPaivitettava() {
         return piirtoalusta;
     }
-    
-     public JFrame getFrame() {
+
+    public JFrame getFrame() {
         return frame;
     }
 

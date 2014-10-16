@@ -69,7 +69,7 @@ public class Liikkuja {
      * tyhjä, ei liikuta.
      */
     public void liiku() {
-        tarkistaSisaSeinat_Level1(suunta);
+        tarkistaSisaSeinat(suunta, this.kentta);
         tarkistaUlkoSeinat();
 
         if (suunta == Suunta.OIKEA) {
@@ -104,24 +104,62 @@ public class Liikkuja {
             setSuunta(suunta.TYHJA);
         }
     }
-    
+
     /**
      * liiku-metodin apumetodi kentälle 1.
      */
-
-    public void tarkistaSisaSeinat_Level1(Suunta suunta) {
-        if (saakoTastaKaantya_Level1(this.x, this.y) == true) {
-            setSuunta(uusisuunta);
-        } else {
-            setSuunta(suunta);
+    public void tarkistaSisaSeinat(Suunta suunta, int kentta) {
+        if (kentta == 1) {
+            if (saakoTastaKaantya_Level1(this.x, this.y, suunta, uusisuunta) == true) {
+                setSuunta(uusisuunta);
+            } else {
+                setSuunta(suunta);
+            }
+        } else if (kentta == 2) {
+            if (saakoTastaKaantya_Level2(this.x, this.y) == true) {
+                setSuunta(uusisuunta);
+            } else {
+                setSuunta(suunta);
+            }
+            
         }
+
+    }
+
+    /**
+     * apumetodi kentälle 1.
+     */
+    public boolean saakoTastaKaantya_Level1(int x, int y, Suunta suunta, Suunta uusisuunta) {
+        boolean ok;
+
+        if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
+            ok = true;
+        } else {
+            ok = false;
+        }
+        
+        if (suunta == suunta.YLOS && uusisuunta == uusisuunta.ALAS) {
+            ok = true;
+        } else if (suunta == suunta.ALAS && uusisuunta == uusisuunta.YLOS) {
+            ok = true;
+        } else if (suunta == suunta.VASEN && uusisuunta == uusisuunta.OIKEA) {
+            ok = true;
+        }  else if (suunta == suunta.OIKEA && uusisuunta == uusisuunta.VASEN) {
+            ok = true;
+        }  else if (suunta == suunta.TYHJA) {
+            ok = true;
+        }
+        
+        return ok;
+
     }
     
     /**
-     * apumetodi
+     * apumetodi kentälle 2.
      */
-
-    public boolean saakoTastaKaantya_Level1(int x, int y) {
+    
+    
+    public boolean saakoTastaKaantya_Level2(int x, int y) {
         if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
             return true;
         } else {
@@ -130,12 +168,13 @@ public class Liikkuja {
 
     }
     
+
     /**
-     * Seekerin "tekoälyn" sisältävä jahtausmetodi.
+     * Seekerin "tekoälyn" sisältävä jahtausmetodi. Seeker näkee missä gapper on
+     * ja suuntaa itsensä siihen suuntaan.
+     *
      * @param Gapper gapper
      */
-
-
     public void jahtaa(Gapper gapper) {
         if ((gapper.getX() < this.x)) {
             this.uusisuunta = suunta.VASEN;
