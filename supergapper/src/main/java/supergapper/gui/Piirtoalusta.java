@@ -103,17 +103,13 @@ public class Piirtoalusta extends JPanel implements Paivitettava {
     
     public void piirraKentanSisaViivat_Level2(Graphics g) {
         g.setColor(Color.RED);
-        g.drawLine(203, 15, 203, 515); // pystyviivat
-        g.drawLine(390, 15, 390, 515); 
-        g.drawLine(578, 15, 578, 515); 
+        g.drawLine(203+5, 15, 203+5, 515); // pystyviivat
+        g.drawLine(390+5, 15, 390+5, 515); 
+        g.drawLine(578+5, 15, 578+5, 515); 
         
-        g.drawLine(15, 140, 765, 140); // vaakaviivat
-        g.drawLine(15, 265, 765, 265); 
-        g.drawLine(15, 390, 765, 390); 
-        
-//        g.drawLine(15, 125+15, 765, 125+15); 
-//        g.drawLine(15, 250+15, 765, 250+15); 
-//        g.drawLine(15, 375+15, 765, 375+15); 
+        g.drawLine(15, 140+5, 765, 140+5); // vaakaviivat
+        g.drawLine(15, 265+5, 765, 265+5); 
+        g.drawLine(15, 390+5, 765, 390+5); 
         
 
     }
