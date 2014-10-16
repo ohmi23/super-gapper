@@ -110,6 +110,7 @@ public class Gapperpeli extends Timer implements ActionListener {
             aloitaKenttaAlusta();
             if (this.elamat < 0) {
                 this.jatkuu = false;
+                
             } 
         } 
     }

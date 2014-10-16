@@ -16,7 +16,7 @@ public class App
         System.out.println("Morjensta. Tervetuloa pelaamaan Super-Gapperia!");
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");
         Gapperpeli gapperpeli = new Gapperpeli(2); 
-        // Käynnistetään gapperpeli kentässä 1.
+        // Käynnistetään gapperpeli kentässä 2.
         
         Kayttoliittyma kali = new Kayttoliittyma(gapperpeli, 800, 600);
         SwingUtilities.invokeLater(kali);
