@@ -46,7 +46,9 @@ public class Kayttoliittyma implements Runnable {
     }
 
     public void luoKomponentit(Container container) {
-        piirtoalusta = new Piirtoalusta(gapperpeli, 600, 800);
+        
+        piirtoalusta = new Piirtoalusta(gapperpeli, this.sivunPituus, this.sivunLeveys);
+        //piirtoalusta = new Piirtoalusta(gapperpeli, 600, 800);
         container.add(piirtoalusta);
         Nappaimistonkuuntelija n = new Nappaimistonkuuntelija(gapperpeli.getGapper());
         getFrame().addKeyListener(n);

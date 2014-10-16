@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args )
     {
         /*
-        Main luokka luo ja käynnistää gapperpelin ja käyttöliittymän.
+        Main-luokka luo ja käynnistää gapperpelin ja käyttöliittymän.
         */
         
         System.out.println("* * * * * * * * * * * * * * * * * * * * * * * * ");

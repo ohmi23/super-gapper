@@ -46,12 +46,6 @@ public class Gapperpeli extends Timer implements ActionListener {
         
    }
     
-    // To do: 
-    // JUnit testit testaavat onko kenttä oikean kokoinen yms.
-    // Gapper-Seeker törmäysten tarkistaja joka havaitsee törmäyksen ja vähentää elämän, kun elämät loppuvat,
-    // Gapperpeli kirjaa pisteet tiedostoon.
-    // Gapperpeli päättyy.
-
     public Gapper getGapper() {
         return gapper;
     }
