@@ -66,7 +66,10 @@ public class Liikkuja {
      * Liiku-metodi tarkistaa ensin ollaanko kentän sisäpuolella tai reunoilla.
      * Sitten tarkistetaan ollaanko sisäseinien suhteen oikeilla raiteilla. Jos
      * ehdot täyttyvät, liikutaan annettuun suuntaan yksi pikseli. Jos suunta on
-     * tyhjä, ei liikuta.
+     * tyhjä, ei liikuta. 
+     * 
+     * On tärkeää että liiku-metodissa tarkistetaan 
+     * ensin sisäseinä ja sitten vasta ulkoseinä.
      */
     public void liiku() {
         tarkistaSisaSeinat(suunta, this.kentta);
@@ -160,11 +163,27 @@ public class Liikkuja {
     
     
     public boolean saakoTastaKaantya_Level2(int x, int y) {
+        boolean ok;
+
         if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
-            return true;
+            ok = true;
         } else {
-            return false;
+            ok = false;
         }
+        
+        if (suunta == suunta.YLOS && uusisuunta == uusisuunta.ALAS) {
+            ok = true;
+        } else if (suunta == suunta.ALAS && uusisuunta == uusisuunta.YLOS) {
+            ok = true;
+        } else if (suunta == suunta.VASEN && uusisuunta == uusisuunta.OIKEA) {
+            ok = true;
+        }  else if (suunta == suunta.OIKEA && uusisuunta == uusisuunta.VASEN) {
+            ok = true;
+        }  else if (suunta == suunta.TYHJA) {
+            ok = true;
+        }
+        
+        return ok;
 
     }
     

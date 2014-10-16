@@ -83,7 +83,7 @@ public class Gapperpeli extends Timer implements ActionListener {
     */
         
     public void aloitaKenttaAlusta() {
-        this.gapper.setSuunta(Suunta.OIKEA);
+        this.gapper.setSuunta(Suunta.TYHJA);
         this.gapper.setUusiSuunta(Suunta.OIKEA);
         this.gapper.setSijainti(10, 10);
         this.seeker.setSijainti(760,510);
@@ -139,7 +139,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         tarkastaTormaykset(this.gapper, this.seeker);
         gapper.liiku();
         tarkastaTormaykset(this.gapper, this.seeker);
-        //pisteet++;
+        pisteet++;
         
         paivitettava.paivita();
         setDelay(5); // nopeutetaan kentän mukaan
