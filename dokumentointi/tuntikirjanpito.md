@@ -84,8 +84,8 @@ Viikko 7
 
 14.10 ti - 3h. Demotilaisuus. Demoefekti on totta. demotilaisuudessa videotykki toimii muuten moitteettomasti paitsi että punainen värikanava ei toimi. Tehty hieman Javadoc-merkintöjä.
 
-15.10 ke - xh.
+15.10 ke - 4h. Tehty testipohjat javadocille.
 
-16.10 to - xh.
+16.10 to - 4h. Korjattu bugi: Gapper/Seeker voi kääntyä nyt muuallakin kuin risteyksissä. Tehty toinen kenttä.
 
 17.10 pe - xh.
