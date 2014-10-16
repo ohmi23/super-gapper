@@ -5,8 +5,8 @@ package supergapper.logiikka.liikkuja;
  */
 public class Gapper extends Liikkuja {
 
-    public Gapper(int x, int y, Suunta suunta) {
-        super(x, y, suunta);
+    public Gapper(int x, int y, Suunta suunta, int kentannumero) {
+        super(x, y, suunta, kentannumero);
     }
 
 }

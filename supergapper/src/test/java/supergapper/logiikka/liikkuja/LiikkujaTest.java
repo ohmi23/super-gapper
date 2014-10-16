@@ -13,8 +13,8 @@ public class LiikkujaTest {
     private Seeker seeker;
     
     public LiikkujaTest() {
-        this.gapper = new Gapper(10,10, Suunta.OIKEA);
-        this.seeker = new Seeker(760,510, Suunta.VASEN);
+        this.gapper = new Gapper(10,10, Suunta.OIKEA, 1);
+        this.seeker = new Seeker(760,510, Suunta.VASEN, 1);
     }
     
     @BeforeClass

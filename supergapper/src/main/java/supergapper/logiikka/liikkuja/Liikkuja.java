@@ -20,13 +20,13 @@ public class Liikkuja {
     private Suunta uusisuunta;
     private int kentta;
 
-    public Liikkuja(int x, int y, Suunta suunta) {
+    public Liikkuja(int x, int y, Suunta suunta, int kentta) {
         this.x = x;
         this.y = y;
         this.suunta = suunta;
         this.uusisuunta = suunta;
         this.nopeus = 100; // Gapper aina nopeampi kuin Seeker tai yhtä nopea.
-        this.kentta = 1;
+        this.kentta = kentta;
     }
 
     public int getX() {
@@ -95,6 +95,8 @@ public class Liikkuja {
 
     /**
      * liiku-metodin apumetodi
+     * seinät ovat samassa paikassa kentästä riippumatta joten
+     * samaa metodia voidaan käyttää kaikille kentille.
      */
     public void tarkistaUlkoSeinat() {
         if (suunta == Suunta.OIKEA && this.x == 760) {
@@ -109,7 +111,7 @@ public class Liikkuja {
     }
 
     /**
-     * liiku-metodin apumetodi kentälle 1.
+     * liiku-metodin apumetodi joka tietää missä kentässä ollaan.
      */
     public void tarkistaSisaSeinat(Suunta suunta, int kentta) {
         if (kentta == 1) {
@@ -119,7 +121,7 @@ public class Liikkuja {
                 setSuunta(suunta);
             }
         } else if (kentta == 2) {
-            if (saakoTastaKaantya_Level2(this.x, this.y) == true) {
+            if (saakoTastaKaantya_Level2(this.x, this.y, suunta, uusisuunta) == true) {
                 setSuunta(uusisuunta);
             } else {
                 setSuunta(suunta);
@@ -162,10 +164,9 @@ public class Liikkuja {
      */
     
     
-    public boolean saakoTastaKaantya_Level2(int x, int y) {
+    public boolean saakoTastaKaantya_Level2(int x, int y, Suunta suunta, Suunta uusisuunta) {
         boolean ok;
-
-        if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
+        if ((x == 10 || x == 203 || x == 390 || x == 578 || x == 760) && (y == 10 ||  y == 140 || y == 265 || y == 390 || y == 510)) {
             ok = true;
         } else {
             ok = false;
@@ -184,6 +185,15 @@ public class Liikkuja {
         }
         
         return ok;
+        
+//        g.drawLine(203, 15, 203, 515); // pystyviivat y
+//        g.drawLine(390, 15, 390, 515); 
+//        g.drawLine(578, 15, 578, 515); 
+//        
+//        g.drawLine(15, 140, 765, 140); // vaakaviivat x
+//        g.drawLine(15, 265, 765, 265); 
+//        g.drawLine(15, 390, 765, 390); 
+        
 
     }
     
