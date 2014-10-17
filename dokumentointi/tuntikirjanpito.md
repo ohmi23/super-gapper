@@ -88,4 +88,4 @@ Viikko 7
 
 16.10 to - 4h. Korjattu bugi: Gapper/Seeker voi kääntyä nyt muuallakin kuin risteyksissä. Tehty toinen kenttä.
 
-17.10 pe - xh.
+17.10 pe - 10h. Päivitetty aihekuvausta, käyttöohjeita ja testausdokumenttia. Poistettu turhaa koodia ja kommentoitua koodia. Yritetty saada pom.xml konfiguroitua niin että maven-projektista käännetty .jar -tiedosto suostuisi toimimaan."Failed to load Main-Class manifest attribute from supergapper-1.0-SNAPSHOT.jar" tuloksena kaikilla kokeilluilla konfiguraatioilla.
