@@ -30,7 +30,7 @@ public class Kayttoliittyma implements Runnable {
 
     @Override
     public void run() {
-        frame = new JFrame("Supergapper 2014 (v0.1)" + " (" + this.sivunPituus + "x" + this.sivunLeveys + ")");
+        frame = new JFrame("Supergapper 2014" + " (" + this.sivunPituus + "x" + this.sivunLeveys + ")");
         int sivunPituus = this.sivunPituus;
         int sivunLeveys = this.sivunLeveys;
         frame.setPreferredSize(new Dimension(sivunPituus, sivunLeveys));
