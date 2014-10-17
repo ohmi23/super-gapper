@@ -126,9 +126,7 @@ public class Liikkuja {
             } else {
                 setSuunta(suunta);
             }
-            
         }
-
     }
 
     /**
@@ -136,7 +134,6 @@ public class Liikkuja {
      */
     public boolean saakoTastaKaantya_Level1(int x, int y, Suunta suunta, Suunta uusisuunta) {
         boolean ok;
-
         if ((x == 10 || x == 260 || x == 510 || x == 760) && (y == 10 || y == 165 || y == 335 || y == 510)) {
             ok = true;
         } else {
@@ -154,16 +151,12 @@ public class Liikkuja {
         }  else if (suunta == suunta.TYHJA) {
             ok = true;
         }
-        
         return ok;
-
     }
     
     /**
      * apumetodi kentälle 2.
      */
-    
-    
     public boolean saakoTastaKaantya_Level2(int x, int y, Suunta suunta, Suunta uusisuunta) {
         boolean ok;
         if ((x == 10 || x == 203 || x == 390 || x == 578 || x == 760) && (y == 10 ||  y == 140 || y == 265 || y == 390 || y == 510)) {
@@ -183,18 +176,7 @@ public class Liikkuja {
         }  else if (suunta == suunta.TYHJA) {
             ok = true;
         }
-        
         return ok;
-        
-//        g.drawLine(203, 15, 203, 515); // pystyviivat y
-//        g.drawLine(390, 15, 390, 515); 
-//        g.drawLine(578, 15, 578, 515); 
-//        
-//        g.drawLine(15, 140, 765, 140); // vaakaviivat x
-//        g.drawLine(15, 265, 765, 265); 
-//        g.drawLine(15, 390, 765, 390); 
-        
-
     }
     
 
@@ -220,16 +202,4 @@ public class Liikkuja {
 
     }
 
-//    public void pakene(Gapper gapper) {
-//        // Seeker ei käytä pakene-metodia.        
-//        if (gapper.getX() < this.x) {
-//            this.x++;
-//        } else if (gapper.getX() > this.x) {
-//            this.x--;
-//        } else if (gapper.getY() < this.y) {
-//            this.y++;
-//        } else if (gapper.getY() > this.y) {
-//            this.y--;
-//        }
-//    }
 }

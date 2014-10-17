@@ -8,3 +8,4 @@ Ohjelman olemassaolevat bugit:
 
 - Toista kentt‰‰ ei voi k‰ytt‰‰ koska pelin scene‰ hallinnoivaa mekanismia ei ole toteutettu.
 - Toiminnallisuudeltaan puutteellisti toteutetut luokat: pistelaskuri, kentta, tronviiva, ruutu.
+- .jar tiedostoa ei ole saatu luotua mavenilla.
