@@ -18,7 +18,10 @@ import static org.junit.Assert.*;
  */
 public class GapperpeliTest {
     
+    private Gapperpeli gapperpeli;
+    
     public GapperpeliTest() {
+        this.gapperpeli = new Gapperpeli(1);
     }
     
     @BeforeClass
@@ -36,6 +39,8 @@ public class GapperpeliTest {
     @After
     public void tearDown() {
     }
+    
+    
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
