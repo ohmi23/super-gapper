@@ -88,4 +88,4 @@ Viikko 7
 
 16.10 to - 4h. Korjattu bugi: Gapper/Seeker voi kääntyä nyt muuallakin kuin risteyksissä. Tehty toinen kenttä.
 
-17.10 pe - 10h. Päivitetty aihekuvausta, käyttöohjeita ja testausdokumenttia. Poistettu turhaa koodia ja kommentoitua koodia. Yritetty saada pom.xml konfiguroitua oikein.
+17.10 pe - 12h. Päivitetty aihekuvausta, käyttöohjeita ja testausdokumenttia. Poistettu turhaa koodia ja kommentoitua koodia. Yritetty saada pom.xml konfiguroitua oikein. Kyselty IRC:ssä neuvoja. Toimiva jar-tiedosto saatu tuotettua. Päivitetty dokumentaatiota.
