@@ -108,6 +108,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
             this.elamat--;
             aloitaKenttaAlusta();
+            gapper.setUusiSuunta(Suunta.TYHJA);
             if (this.elamat <= 0) {
                 this.jatkuu = false;
                 
