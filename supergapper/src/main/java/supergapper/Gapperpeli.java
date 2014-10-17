@@ -108,7 +108,7 @@ public class Gapperpeli extends Timer implements ActionListener {
         if (gapper.getX() == seeker.getX() && gapper.getY() == seeker.getY()) {
             this.elamat--;
             aloitaKenttaAlusta();
-            if (this.elamat < 0) {
+            if (this.elamat <= 0) {
                 this.jatkuu = false;
                 
             } 
@@ -118,7 +118,7 @@ public class Gapperpeli extends Timer implements ActionListener {
     
     /*
     Gapperpelin tapahtumia tarkkaileva actionPerformed-metodi.
-    
+    Jokaisen liikkeen jälkeen tarkistetaan törmäykset.
     Gapper liikkuu kahdesti
     Seeker liikkuu kerran
     Jos Gapper osuu seinään, se jää paikalleen.
